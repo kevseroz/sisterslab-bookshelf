@@ -1,3 +1,3 @@
 # İlk Ortak Projemiz
 
-Sup bro
+# Sup bro
