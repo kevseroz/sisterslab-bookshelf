@@ -85,7 +85,7 @@ const BookDetail = () => {
                         onBlur={formik.handleBlur}
                     />
                     <Button color="success" variant="contained" fullWidth type="submit">
-                        Add Comment
+                        Add New Comment
                     </Button>
                 </form>
             </div>
