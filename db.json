@@ -35,6 +35,15 @@
       "price": "23",
       "imageUrl": null,
       "id": 4
+    },
+    {
+      "title": "Aliquam omnis occaec",
+      "author": "Est veniam quae pe",
+      "description": "Rerum nulla duis arc",
+      "currency": "USD",
+      "price": "137",
+      "imageUrl": "",
+      "id": 5
     }
   ],
   "posts": [
@@ -79,6 +88,21 @@
       "body": "Kevser Deneme",
       "bookId": "4",
       "id": 10
+    },
+    {
+      "body": "askmasdlmaskdlasd",
+      "bookId": "1",
+      "id": 11
+    },
+    {
+      "body": "askmasdlmaskdlasd",
+      "bookId": "1",
+      "id": 12
+    },
+    {
+      "body": "askmasdlmaskdlasd",
+      "bookId": "1",
+      "id": 13
     }
   ],
   "profile": {
