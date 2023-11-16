@@ -107,5 +107,19 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "username": "artefilex",
+      "password": "asdfghjkl",
+      "email": "baris.tncdmr@gmail.com",
+      "id": 1
+    },
+    {
+      "username": "artefilex",
+      "email": "baris.tncdmr@gmail.com",
+      "password": "azsxdcfvgb",
+      "id": 2
+    }
+  ]
 }
