@@ -68,7 +68,7 @@ const BookDetail = () => {
             <Typography variant="body">{book.description}</Typography>
             {comments && (<>
                 <Typography marginTop={5} variant="h4">Comments</Typography>
-                {comments.map((comment) => <AlignItemsList body={comment.body} />)}
+                {comments.map((comment) => <AlignItemsList key={comment.id} body={comment.body} id={comment.id}  />)}
             </>)}
             <div>
                 <form onSubmit={formik.handleSubmit}>
