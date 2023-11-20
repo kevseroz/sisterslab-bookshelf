@@ -19,6 +19,7 @@ const Home = () => {
             .get('http://localhost:3001/books')
             .then((response) => {
                 setBooks(response.data);
+                console.log("deneme")
             })
             .catch((error) => console.error('error :>> ', error));
     }, []);
