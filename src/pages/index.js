@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import {
     Button,
     Card,
@@ -8,12 +9,12 @@ import {
     Typography,
 } from '@mui/material';
 import axios from 'axios';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {useEffect, useState} from 'react';
 
 const Home = () => {
     const [books, setBooks] = useState([]);
-
+    const router = useRouter()
     useEffect(() => {
         axios
             .get('http://localhost:3001/books')
@@ -24,14 +25,15 @@ const Home = () => {
     }, []);
 
     return (
-        <>
+        <> 
+        <Navbar/>
             <Grid
                 container
                 justifyContent="center"
                 alignItems="flex-start"
                 marginTop={5}
                 >
-                {books &&
+                {books  &&
                     books.map((book) => (
                         <Grid container
                               justifyContent="center"
@@ -43,43 +45,33 @@ const Home = () => {
                                         image={book.imageUrl ?? 'https://picsum.photos/200/300'}
                                         alt={book.title}
                                     />
+                                    
                                     <CardContent>
                                         <Typography style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis'}} gutterBottom variant="h5" component="div">
                                             {book.title}
                                         </Typography>
-                                        <Typography style={{height: 120, overflow: 'hidden', textOverflow: 'ellipsis'}}  variant="body2" color="text.secondary">
+                                        <Typography  style={{height: 120, overflow: 'hidden', textOverflow: 'ellipsis'}}  variant="body2" color="text.secondary">
                                             {book.description}...
                                         </Typography>
                                     </CardContent>
                                     <CardActions  >
-                                        <Link
-                                            href={`/books/${book.id}`}
-                                            style={{textDecoration: 'none'}}
-                                        >
-                                            <Button color="warning" variant="contained" size="small">
+                                            <Button onClick={() => router.push(`/books/${book.id}`)} color="warning" variant="contained" size="small">
                                                 Details
                                             </Button>
-                                        </Link>
-                                        <Link
-                                            href={`/edit-books/${book.id}`}
-                                            style={{textDecoration: 'none'}}
-                                        >
-                                            <Button color="warning" variant="outlined" size="small">
-                                                Edit
+                                            <Button onClick={() => router.push(`/edit-books/${book.id}`)} color="warning" variant="contained" size="small">
+                                                Details
                                             </Button>
-                                        </Link>
                                     </CardActions>
                             </Card>
                         </Grid>
                     ))}
             </Grid>
-            <div style={{display: "flex", justifyContent: 'center'}}>
-                <Link href="/add-book">
-                    <Button variant="contained" color="success">
+            {/* <div style={{display: "flex", justifyContent: 'center'}}>
+                    <Button onClick={() => router.push(`/add-book`)}  variant="contained" color="success">
                         Add Book
                     </Button>
-                </Link>
-            </div>
+
+            </div> */}
 
         </>
     );
