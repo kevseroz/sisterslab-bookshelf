@@ -35,6 +35,15 @@
       "price": "23",
       "imageUrl": null,
       "id": 4
+    },
+    {
+      "title": "Deneme",
+      "author": "Fadime",
+      "description": "ksasahtdxahjuskısjchsçkcdsjcygftyeıoslljböx ",
+      "currency": "TRY",
+      "price": "20",
+      "imageUrl": "https://i.pinimg.com/originals/fd/6e/3f/fd6e3fce3fe3a6ae8556dc8a8cca3841.jpg",
+      "id": 5
     }
   ],
   "posts": [
